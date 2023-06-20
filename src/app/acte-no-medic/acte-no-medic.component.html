@@ -1,0 +1,30 @@
+
+<div class="mat-elevation-z8">
+
+  <table class="table-container" mat-table [dataSource]="actesNoMedic" tableActeNoMedic >
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> Titre </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action </th>
+      <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="prix">
+      <th mat-header-cell *matHeaderCellDef> Prix </th>
+      <td mat-cell *matCellDef="let element"> {{element.prix}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [length]="84" [pageSize]="10" [pageSizeOptions]="[50, 100]"></mat-paginator>
+
+
+
+</div>

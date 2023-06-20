@@ -1,0 +1,35 @@
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="nom">Nom:</label>
+    <input type="text" class="form-control" id="nom" [(ngModel)]="model.nom" name="nom">
+  </div>
+  <div class="form-group">
+    <label for="prenom">Prénom:</label>
+    <input type="text" class="form-control" id="prenom" [(ngModel)]="model.prenom" name="prenom">
+  </div>
+  <div class="form-group">
+    <label for="dateDeNaissance">Date de naissance:</label>
+    <input type="date" class="form-control" id="dateDeNaissance" [(ngModel)]="model.dateDeNaissance" name="dateDeNaissance">
+  </div>
+  <div class="form-group">
+    <label for="numeroNational">Numéro national:</label>
+    <input type="text" class="form-control" id="numeroNational" [(ngModel)]="model.numeroNational" name="numeroNational">
+  </div>
+  <div class="form-group">
+    <label for="gynecologue">Gynécologue:</label>
+    <input type="text" class="form-control" id="gynecologue" [(ngModel)]="model.gynecologue" name="gynecologue">
+  </div>
+  <div class="form-group">
+    <label for="mutuelle">Mutuelle:</label>
+    <input type="text" class="form-control" id="mutuelle" [(ngModel)]="model.mutuelle" name="mutuelle">
+  </div>
+  <div class="form-group">
+    <label for="nTelephone">Numéro de téléphone:</label>
+    <input type="text" class="form-control" id="nTelephone" [(ngModel)]="model.nTelephone" name="nTelephone">
+  </div>
+  <div class="form-group">
+    <label for="mail">Adresse email:</label>
+    <input type="email" class="form-control" id="mail" [(ngModel)]="model.mail" name="mail">
+  </div>
+  <button type="submit" class="btn btn-primary">Enregistrer</button>
+</form>

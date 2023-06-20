@@ -1,0 +1,40 @@
+
+
+  <!-- <button (click)="getActesMedical()">Call API</button> -->
+  <!-- <ul>
+    <li *ngFor='let acteMedical of actesMedicaux'>
+      {{acteMedical.id}} - {{acteMedical.action}} - {{acteMedical.prix}}
+    </li>
+  </ul> -->
+
+
+
+  <div class="mat-elevation-z8">
+
+    <table class="table-container" mat-table [dataSource]="actesMedicaux" tableActe >
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action </th>
+        <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="prix">
+        <th mat-header-cell *matHeaderCellDef> Prix </th>
+        <td mat-cell *matCellDef="let element"> {{element.prix}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [length]="84" [pageSize]="10" [pageSizeOptions]="[10, 50, 100]"></mat-paginator>
+
+
+
+</div>

@@ -1,0 +1,39 @@
+
+.content {
+  // height: 100%;
+    padding-right: 240px;
+    padding-left: 250px;
+    padding-bottom:0;
+}
+
+// .content > mat-card {
+//   width: 200px;
+// }
+
+mat-card-content{
+  height: 50px;
+  color:white;
+}
+mat-card-actions{
+  align-items: center;
+}
+
+// @media screen and (max-width: 1000px) {
+//   .content {
+//     padding: 0;
+//   }
+// }
+
+@media screen and (min-width: 780px) {
+  .full-width-img {
+  margin: auto;
+  width: 90%;
+  }}
+
+  mat-card-title{
+    color: rgb(225, 58, 122)
+  }
+
+  a{
+    color: rgb(225, 58, 122)
+  }

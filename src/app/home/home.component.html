@@ -1,0 +1,73 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>Patienteles</mat-card-title>
+        <mat-card-subtitle>Créer ou voir les patientes </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image
+        src="https://images.pexels.com/photos/16049868/pexels-photo-16049868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="photo d'une maman avec son bebe"
+        class=”full-width-img”>
+      <mat-card-content>
+        <p>
+          Tu peux créer une nouvelle patiente ou aller chercher une que tu as déjà vu,
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a (click)="goToCreatePatiente()" mat-raised-button>Créer une nouvelle </a>
+        <a (click)="goToListPatiente()"mat-raised-button >Voir la liste</a>
+      </mat-card-actions>
+    
+    </mat-card>
+  </div>
+  <!-- DEUXIEME CARD -->
+  <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+
+        <mat-card-title>Liste de mes soins</mat-card-title>
+        <mat-card-subtitle>Liste à afficher/partager pour tes patientes </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image
+        src="https://images.pexels.com/photos/7089047/pexels-photo-7089047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="Femme enceinte recevant une echographie"
+        class=”full-width-img”>
+      <mat-card-content>
+        <p>
+          Tu peux créer une nouvelle patiente ou aller chercher une que tu as déjà vu,
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="goToListSoinsSf()" mat-raised-button> Afficher liste des soins Sage-Femme</button>
+        <a (click)="goToListNoMedic()" mat-raised-button >Afficher la liste des soins Non-Medical</a>
+      </mat-card-actions>
+    
+    </mat-card>
+  </div>
+
+  <!-- TROISIEME CARD -->
+  <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <mat-card-title>Facturation</mat-card-title>
+        <mat-card-subtitle>Créer tes tableaux pour les mutuelles ou facture </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image
+        src="https://images.pexels.com/photos/8927456/pexels-photo-8927456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="Une femme sur un tas de feuilles factures"
+        class=”full-width-img”>
+      <mat-card-content>
+        <p>
+          Pour faire toutes tes factures, tableaux, ...
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button >Créer un nouveau tableau</a>
+        <a mat-raised-button >Voir la liste déjà crée</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
