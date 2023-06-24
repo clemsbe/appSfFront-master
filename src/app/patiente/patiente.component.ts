@@ -5,7 +5,7 @@ export class Patiente {
   numeroNational : number;
   gynecologue : string;
   mutuelle : string;
-  nTelephone : number;
+  numeroDeTelephone : number;
   email : string; 
 
 constructor(
@@ -15,7 +15,7 @@ constructor(
   numeroNational: number = 123456123123,
   gynecologue: string = 'Grosdoigt',
   mutuelle: string = 'La mouutouelle',
-  nTelephone: number = 12345678910,
+  numeroDeTelephone: number = 12345678910,
   email : string ='monAdresseEmail@mail.com'
 
   ){
@@ -26,7 +26,7 @@ constructor(
     this.numeroNational = numeroNational;
     this.gynecologue = gynecologue;
     this.mutuelle = mutuelle;
-    this.nTelephone = nTelephone;
+    this.numeroDeTelephone = numeroDeTelephone;
     this.email = email;
 }
 }

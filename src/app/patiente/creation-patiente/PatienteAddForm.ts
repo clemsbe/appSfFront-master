@@ -5,7 +5,7 @@ export class PatienteAddForm {
   numeroNational: number | undefined;
   gynecologue: string = '';
   mutuelle: string = '';
-  nTelephone: number | undefined;
+  numeroDeTelephone: number | undefined;
   mail: string = '';
 
   constructor() { }

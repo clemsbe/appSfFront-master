@@ -15,14 +15,14 @@ export class CreationPatienteComponent {
     numeroNational: Number(''),
     gynecologue: '',
     mutuelle: '',
-    nTelephone: 0,
+    numeroDeTelephone: 0,
     mail: '',
   };
 
   constructor(private http: HttpClient) { }
 
   onSubmit() {
-    this.http.post('http://localhost:8080/list-patiente/', this.model).subscribe(
+    this.http.post('http://localhost:8080/patiente/add', this.model).subscribe(
       (response) => {
         console.log('Patiente créée:', response);
       },
