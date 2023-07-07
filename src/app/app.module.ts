@@ -22,6 +22,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { ActeMedicalComponent } from './acte-medical/acte-medical.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
+import { PatienteService } from './patiente/patiente.service';
+import { ListPatientesService } from './patiente/list-patiente/list-patiente.service';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -51,13 +54,17 @@ import { LoginComponent } from './login/login.component';
     MatTableModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
+    
 
 
 
 
   ],
   providers: [
-    ActeMedicalService
+    ActeMedicalService,
+    PatienteService,
+    ListPatientesService,
+    DatePipe,
   ],
   bootstrap: [AppComponent]
 })

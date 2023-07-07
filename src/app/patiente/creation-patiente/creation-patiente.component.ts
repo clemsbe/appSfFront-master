@@ -17,6 +17,12 @@ export class CreationPatienteComponent {
     mutuelle: '',
     numeroDeTelephone: 0,
     mail: '',
+    ville: '',
+    rue: '',
+    numeroDeMaison: '',
+    lieuDit:'',
+    traitSpec:'',
+    km: Number(''),
   };
 
   constructor(private http: HttpClient) { }
@@ -25,10 +31,12 @@ export class CreationPatienteComponent {
     this.http.post('http://localhost:8080/patiente/add', this.model).subscribe(
       (response) => {
         console.log('Patiente créée:', response);
+        alert("Enregistré!");
       },
       (error) => {
         console.log('Erreur lors de la création de la patiente:', Error);
         console.error(error); // Ajout de cette ligne pour afficher plus d'informations sur l'erreur
+        alert("Erreur voir Clément");
       }
     );
   }

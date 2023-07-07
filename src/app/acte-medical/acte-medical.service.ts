@@ -8,15 +8,9 @@ export class ActeMedicalService{
 
   private apiUrl = 'http://localhost:8080/acteMedical';
 
-  // ?size=100
-
     constructor(private http: HttpClient){}
 
-    // getActesMedical(): Observable<any[]> {
-    //   return this.http.get<any[]>(this.apiUrl);
-    // }
 
-    // test chat gtp paginator
 
     getActesMedical(page: number, size: number): Observable<any[]> {
       const params = { page: page.toString(), size: size.toString() };
@@ -26,9 +20,7 @@ export class ActeMedicalService{
 }
 
 
-// getActesMedical(){
-//     return this.http.get<ActeMedicalService[]>("http://localhost:8080/acteMedical")
-// }
+
 
 
 

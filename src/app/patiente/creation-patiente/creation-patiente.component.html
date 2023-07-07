@@ -31,5 +31,35 @@
     <label for="mail">Adresse email:</label>
     <input type="email" class="form-control" id="mail" [(ngModel)]="model.mail" name="mail">
   </div>
+
+  <h1>Adresse Postale</h1>
+
+  <div class="form-group">
+    <label for="ville">Ville:</label>
+    <input type="text" class="form-control" id="ville" [(ngModel)]="model.ville" name="ville">
+  </div>
+  <div class="form-group">
+    <label for="rue">Rue:</label>
+    <input type="text" class="form-control" id="rue" [(ngModel)]="model.rue" name="rue">
+  </div>
+  <div class="form-group">
+    <label for="numeroDeMaison">Numéro:</label>
+    <input type="text" class="form-control" id="numeroDeMaison" [(ngModel)]="model.numeroDeMaison" name="numeroDeMaison">
+  </div>
+  <div class="form-group">
+    <label for="lieuDit">Le lieu Dit :</label>
+    <input type="text" class="form-control" id="lieuDit" [(ngModel)]="model.lieuDit" name="lieuDit">
+  </div>
+  <div class="form-group">
+    <label for="traitSpec">Trait Spécifique à l'habitation:</label>
+    <input type="text" class="form-control" id="traitSpec" [(ngModel)]="model.traitSpec" name="traitSpec">
+  </div>
+  <div class="form-group">
+    <label for="km">Km parcouru:</label>
+    <input type="text" class="form-control" id="km" [(ngModel)]="model.km" name="km">
+  </div>
+
+
+
   <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>
