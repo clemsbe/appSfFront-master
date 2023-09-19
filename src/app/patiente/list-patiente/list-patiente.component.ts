@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe]
 })
 export class ListPatienteComponent implements OnInit {
-  displayedColumns: string[] = ['dateDeNaissance', 'nom', 'prenom'];
+  displayedColumns: string[] = ['dateDeNaissance', 'nom', 'prenom', 'numeroDeTelephone', 'ville', 'rue','numeroDeMaison'];
   listPatientes = new MatTableDataSource<any>([]);
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
 

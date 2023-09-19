@@ -7,20 +7,21 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ListPatienteComponent } from './patiente/list-patiente/list-patiente.component';
 import { ActeNoMedicComponent } from './acte-no-medic/acte-no-medic.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+
 
 
 const routes: Routes = [
-{path: 'home', component: HomeComponent},
-{path: '', component: HomeComponent},
+{path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+{path: '', component: HomeComponent, canActivate: [AuthGuard]},
 // {path: '', redirectTo: 'login', pathMatch: 'full'},
-// {path: 'login', component: LoginComponent },
+{path: 'login', component: LoginComponent },
 {path: 'acte-medical', component: ActeMedicalComponent},
 {path: 'acte-Non-Medical', component: ActeNoMedicComponent},
-{path: 'creation-patiente', component: CreationPatienteComponent},
-{path: 'list-patiente', component: ListPatienteComponent},
+{path: 'creation-patiente', component: CreationPatienteComponent, canActivate: [AuthGuard]},
+{path: 'list-patiente', component: ListPatienteComponent, canActivate:[AuthGuard]},
 {path: '**', component: PageNotFoundComponent}
 
-// redirectTo: 'login', pathMatch: 'full'}
 
 ];
 

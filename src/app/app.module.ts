@@ -25,6 +25,8 @@ import { LoginComponent } from './login/login.component';
 import { PatienteService } from './patiente/patiente.service';
 import { ListPatientesService } from './patiente/list-patiente/list-patiente.service';
 import { DatePipe } from '@angular/common';
+import { AuthGuard } from './auth.guard';
+
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { DatePipe } from '@angular/common';
     SearchPatienteComponent,
     ActeMedicalComponent,
     LoginComponent,
+   
 
   ],
   imports: [
@@ -65,6 +68,7 @@ import { DatePipe } from '@angular/common';
     PatienteService,
     ListPatientesService,
     DatePipe,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

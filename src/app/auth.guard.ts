@@ -1,6 +1,5 @@
-import { ComponentFactoryResolver, Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, Router,  } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -13,7 +12,9 @@ export class AuthGuard implements CanActivate {
       private router: Router
   ) {}
 
-  canActivate(): boolean {
+  canActivate(
+    route: ActivatedRouteSnapshot,
+  ): boolean {
     if(this.AuthService.isLoggedIn) {
       return true;
     }
@@ -22,3 +23,5 @@ export class AuthGuard implements CanActivate {
   }
   
 }
+
+
